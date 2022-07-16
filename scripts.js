@@ -25,4 +25,14 @@ function Pick(firstP, secondP, thirdP, fourthP, fifthP, sizeP) {
   this.sizeP = sizeP;
 };
 
+Pick.prototype.picked = function () {
+  return this.firstP + "," + this.secondP + "," + this.thirdP + "," + this.fourthP + "," + this.fifthP + "," + this.sizeP;
+};
+
+//User Interface Logic 
+
+window.addEventListener("load", function () {
+  document.querySelector("form#pick").addEventListener("submit")
+});
+
 
