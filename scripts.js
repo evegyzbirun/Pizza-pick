@@ -60,6 +60,18 @@ Pick.prototype.Count = function () {
   }
 };
 
+Pick.prototype.Size = function () {
+  if (this.size === "xlarge") {
+    this.total += 10;
+  } else if (this.size === "large") {
+    this.total += 8;
+  } else if (this.size === "medium") {
+    this.total += 6;
+  } else {
+
+  }
+};
+
 Pick.prototype.picked = function () {
   return this.firstP + "," + this.secondP + "," + this.thirdP + "," + this.fourthP + "," + this.fifthP + "," + this.sizeP;
 };
