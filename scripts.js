@@ -101,6 +101,12 @@ function orderList(pizzaToDisplay) {
   toppingsDiv.append(ul);
 }
 
+function pricesTotal(event) {
+  event.preventDefault();
+
+
+}
+
 
 
 
