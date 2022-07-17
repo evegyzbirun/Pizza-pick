@@ -31,6 +31,22 @@ Pick.prototype.Count = function () {
   if (this.firstP === "pepperoni" || this.firstP === "sausage" || this.firstP === "green bell pepper" || this.firstP === "black olives" || this.firstP === "mushrooms" || this.firstP === "chicken") {
     this.total += 3;
   }
+
+  if (this.secondP === "pepperoni" || this.secondP === "sausage" || this.secondP === "green bell pepper" || this.secondP === "black olives" || this.secondP === "mushrooms" || this.secondP === "chicken") {
+    this.total += 3;
+  }
+
+  if (this.thirdP === "pepperoni" || this.thirdP === "sausage" || this.thirdP === "green bell pepper" || this.thirdP === "black olives" || this.thirdP === "mushrooms" || this.thirdP === "chicken") {
+    this.total += 3;
+  }
+
+  if (this.fourthP === "pepperoni" || this.fourthP === "sausage" || this.fourthP === "green bell pepper" || this.fourthP === "black olives" || this.fourthP === "mushrooms" || this.fourthP === "chicken") {
+    this.total += 3;
+  }
+
+  if (this.fifthP === "pepperoni" || this.fifthP === "sausage" || this.fifthP === "green bell pepper" || this.fifthP === "black olives" || this.fifthP === "mushrooms" || this.fifthP === "chicken") {
+    this.total += 3;
+  }
 };
 
 Pick.prototype.picked = function () {
