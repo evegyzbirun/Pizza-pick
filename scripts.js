@@ -15,6 +15,13 @@ Pizza.prototype.assignId = function () {
   return this.currentId;
 };
 
+Pizza.prototype.findPizza = function (id) {
+  if (this.orders[id] !== undefined) {
+    return this.orders[id];
+  }
+  return false;
+};
+
 //Business Logic for picking toppings and size
 
 function Pick(firstP, secondP, thirdP, fourthP, fifthP, sixthP, sizeP) {
@@ -80,6 +87,11 @@ Pick.prototype.picked = function () {
 
 let pizza = new Pizza();
 
+function orderList(pizzaToDisplay) {
+  let toppingsDiv = document.querySelector("div#toppings");
+
+
+}
 
 
 
