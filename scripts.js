@@ -2,6 +2,7 @@
 function Pizza() {
   this.orders = {}
   this.currentId = 0;
+
 }
 
 Pizza.prototype.addOrder = function (order) {
@@ -23,6 +24,13 @@ function Pick(firstP, secondP, thirdP, fourthP, fifthP, sizeP) {
   this.fourthP = fourthP;
   this.fifthP = fifthP;
   this.sizeP = sizeP;
+  this.total = 0;
+};
+
+Pick.prototype.Count = function () {
+  if (this.firstP === "pepperoni" || this.firstP === "sausage" || this.firstP === "green bell pepper" || this.firstP === "black olives" || this.firstP === "mushrooms" || this.firstP === "chicken") {
+    this.total += 3;
+  }
 };
 
 Pick.prototype.picked = function () {
@@ -30,6 +38,12 @@ Pick.prototype.picked = function () {
 };
 
 //User Interface Logic 
+
+let pizza = new Pizza();
+
+
+
+
 
 window.addEventListener("load", function () {
   document.querySelector("form#pick").addEventListener("submit")
