@@ -2,11 +2,11 @@
 
 #### by _**(Evgeny Zbirun)**_
 
-#### The application
+#### The application let user pick five topping and a size. After submit it will show list of topping and price.
 
 
 
-#### the project link to github: 
+#### the project link to github: https://github.com/evegyzbirun/Pizza-pick
 
 ## Technologies Used:
 * VS code
