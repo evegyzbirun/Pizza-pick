@@ -20,7 +20,7 @@
 2. unzip
 3. open with Visual Studio Code or some other editor that reads Html, Css and JavaScript.
 4. open index.html with live server.
-5. input number.
+5. pick options.
 6. Click submit to see the result.
 
 ## Known bugs
