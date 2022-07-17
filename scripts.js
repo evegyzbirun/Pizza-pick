@@ -89,8 +89,16 @@ let pizza = new Pizza();
 
 function orderList(pizzaToDisplay) {
   let toppingsDiv = document.querySelector("div#toppings");
-
-
+  toppingsDiv.innerHTML = null;
+  const ul = document.createElement("ul");
+  Object.keys(pizzaToDisplay.orders).forEach(function (key) {
+    const order = pizzaToDisplay.findPizza(key);
+    const li = document.createElement("li");
+    li.append(Pick.picked());
+    li.setAttribute("id", order.id);
+    ul.append(li);
+  });
+  toppingsDiv.append(ul);
 }
 
 
