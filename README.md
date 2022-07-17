@@ -38,11 +38,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 #### Tests:
 
-Describe: pick toppings and size
-Test: pick toppings(you can pick some or none of them), pick size (must)
+Describe: Count();
+
+Test: pick toppings(you can pick some or none of them)
+Code: const myPick = new Pick(["pepperoni", "sausage", "green bell pepper", "black olives", "mushrooms"], 15 )
+
+Expect: Pick {toppings: ["pepperoni", "sausage", "green bell pepper", "black olives", "mushrooms"], total: 15}
 
 
-Describe: calculate total price of order
+Describe: Size();
 
+Test: pick size of your pizza(without toppings)
+Code: const mySize = new Pick(["xlarge"])
 
-Describe:
+Expect: order1.Size("xlarge"); to equal [10]

@@ -17,7 +17,7 @@ Pizza.prototype.assignId = function () {
 
 //Business Logic for picking toppings and size
 
-function Pick(firstP, secondP, thirdP, fourthP, fifthP, sizeP) {
+function Pick(firstP, secondP, thirdP, fourthP, fifthP, sixthP, sizeP) {
   this.none = none;
   this.firstP = firstP;
   this.secondP = secondP;
