@@ -1,111 +1,76 @@
-//Business Logic for Pizza(order#)
-function Pizza() {
-  this.orders = {}
-  this.currentId = 0;
-
-}
-
-Pizza.prototype.addOrder = function (order) {
-  order.id = this.assignId();
-  this.orders[order.id] = order;
-};
-
-Pizza.prototype.assignId = function () {
-  this.currentId += 1;
-  return this.currentId;
-};
-
-Pizza.prototype.findPizza = function (id) {
-  if (this.orders[id] !== undefined) {
-    return this.orders[id];
-  }
-  return false;
-};
-
 //Business Logic for picking toppings and size
 
-function Pick(firstP, secondP, thirdP, fourthP, fifthP, sixthP, sizeP) {
+function Pizza(first, second, third, fourth, fifth, size) {
   this.none = none;
-  this.firstP = firstP;
-  this.secondP = secondP;
-  this.thirdP = thirdP;
-  this.fourthP = fourthP;
-  this.fifthP = fifthP;
-  this.sizeP = sizeP;
-  this.total = 0;
+  this.firstP = first;
+  this.secondP = second;
+  this.thirdP = third;
+  this.fourthP = fourth;
+  this.fifthP = fifth;
+  this.sizeP = size;
+  this.price = 4;
+
+  Pizza.prototype.CalSizePrice = function () {
+    if (this.size === "xlarge") {
+      this.price += 6;
+    } else if (this.size === "large") {
+      this.price += 4;
+    } else if (this.size === "medium") {
+      this.price += 2;
+    } else {
+
+    }
+  };
+
+  Pizza.prototype.CalToppingsOne = function () {
+    if (this.first === "none") {
+      this.price += 0;
+    } else {
+      this.price += 3;
+    }
+  };
+
+  Pizza.prototype.CalToppingsTwo = function () {
+    if (this.second === "none") {
+      this.price += 0;
+    } else {
+      this.price += 3;
+    }
+  };
+
+  Pizza.prototype.CalToppingsThree = function () {
+    if (this.third === "none") {
+      this.price += 0;
+    } else {
+      this.price += 3;
+    }
+  };
+
+  Pizza.prototype.CalToppingsFour = function () {
+    if (this.fourth === "none") {
+      this.price += 0;
+    } else {
+      this.price += 3;
+    }
+  };
+
+  Pizza.prototype.CalToppingsFive = function () {
+    if (this.fifth === "none") {
+      this.price += 0;
+    } else {
+      this.price += 3;
+    }
+  };
+
+
 };
 
-Pick.prototype.Count = function () {
-  if (this.firstP === "pepperoni" || this.firstP === "sausage" || this.firstP === "green bell pepper" || this.firstP === "black olives" || this.firstP === "mushrooms" || this.firstP === "chicken") {
-    this.total += 3;
-  } else {
-    this.total += 0;
-  }
-
-  if (this.secondP === "pepperoni" || this.secondP === "sausage" || this.secondP === "green bell pepper" || this.secondP === "black olives" || this.secondP === "mushrooms" || this.secondP === "chicken") {
-    this.total += 3;
-  } else {
-    this.total += 0;
-  }
-
-  if (this.thirdP === "pepperoni" || this.thirdP === "sausage" || this.thirdP === "green bell pepper" || this.thirdP === "black olives" || this.thirdP === "mushrooms" || this.thirdP === "chicken") {
-    this.total += 3;
-  } else {
-    this.total += 0;
-  }
-
-  if (this.fourthP === "pepperoni" || this.fourthP === "sausage" || this.fourthP === "green bell pepper" || this.fourthP === "black olives" || this.fourthP === "mushrooms" || this.fourthP === "chicken") {
-    this.total += 3;
-  } else {
-    this.total += 0;
-  }
-
-  if (this.fifthP === "pepperoni" || this.fifthP === "sausage" || this.fifthP === "green bell pepper" || this.fifthP === "black olives" || this.fifthP === "mushrooms" || this.fifthP === "chicken") {
-    this.total += 3;
-  } else {
-    this.total += 0;
-  }
-};
-
-Pick.prototype.Size = function () {
-  if (this.size === "xlarge") {
-    this.total += 10;
-  } else if (this.size === "large") {
-    this.total += 8;
-  } else if (this.size === "medium") {
-    this.total += 6;
-  } else {
-
-  }
-};
-
-Pick.prototype.picked = function () {
-  return this.firstP + "," + this.secondP + "," + this.thirdP + "," + this.fourthP + "," + this.fifthP + "," + this.sizeP;
-};
+// Pick.prototype.picked = function () {
+//   return this.firstP + "," + this.secondP + "," + this.thirdP + "," + this.fourthP + "," + this.fifthP + "," + this.sizeP;
+// };
 
 //User Interface Logic 
 
-let pizza = new Pizza();
-
-function orderList(pizzaToDisplay) {
-  let toppingsDiv = document.querySelector("div#toppings");
-  toppingsDiv.innerHTML = null;
-  const ul = document.createElement("ul");
-  Object.keys(pizzaToDisplay.orders).forEach(function (key) {
-    const order = pizzaToDisplay.findPizza(key);
-    const li = document.createElement("li");
-    li.append(Pick.picked());
-    li.setAttribute("id", order.id);
-    ul.append(li);
-  });
-  toppingsDiv.append(ul);
-}
-
-function pricesTotal(event) {
-  event.preventDefault();
-
-
-}
 
 
 
