@@ -76,7 +76,29 @@ function Pizza(first, second, third, fourth, fifth, size) {
 
 
 window.addEventListener("load", function () {
-  document.querySelector("form#pick").addEventListener("submit")
+
+
+  document.querySelector("form#pick").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const pick1 = document.getElementById("firstTopping");
+    const pick11 = pick1.options[pick1.selectedIndex].value;
+    const pick2 = document.getElementById("secondTopping");
+    const pick22 = pick2.options[pick2.selectedIndex].value;
+    const pick3 = document.getElementById("thirdTopping");
+    const pick33 = pick3.options[pick3.selectedIndex].value;
+    const pick4 = document.getElementById("fourthTopping");
+    const pick44 = pick4.options[pick4.selectedIndex].value;
+    const pick5 = document.getElementById("fifthTopping");
+    const pick55 = pick5.options[pick5.selectedIndex].value;
+
+    const sizePick = document.getElementById("pickSize");
+    const size = sizePick.options[sizePick.selectedIndex].value;
+
+    let NewPizza = new Pizza(pick11, pick22, pick33, pick44, pick55, size);
+
+
+  })
 });
 
 
