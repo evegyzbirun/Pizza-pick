@@ -44,3 +44,9 @@ Describe: Pizza();
 * Code: let PizzaOrder = new Pizza("pepperoni", "sausage", "green bell pepper", "black olives", "none", "medium" ).
 * Expect: {toppings: "pepperoni", "sausage", "green bell pepper", "black olives", "none", size: "small", price: 18}.
 
+Test2
+Describe: CalToppingsOne();
+
+* Test: pick one topping(small size by default).
+* Code:  let PizzaOrder = new Pizza ("pepperoni").
+* Expect: {toppings: "pepperoni", 7}.
