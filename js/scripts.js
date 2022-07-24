@@ -1,7 +1,6 @@
 //Business Logic for picking toppings and size
 
 function Pizza(first, second, third, fourth, fifth, size) {
-  this.none = none;
   this.firstP = first;
   this.secondP = second;
   this.thirdP = third;
@@ -62,12 +61,12 @@ function Pizza(first, second, third, fourth, fifth, size) {
     }
   };
 
+  // Pizza.prototype.CalPrice = function () {
+  //   document.getElementById("#price-pizza").innerHTML = this.price;
+  // }
 
 };
 
-// Pick.prototype.picked = function () {
-//   return this.firstP + "," + this.secondP + "," + this.thirdP + "," + this.fourthP + "," + this.fifthP + "," + this.sizeP;
-// };
 
 //User Interface Logic 
 
@@ -77,28 +76,46 @@ function Pizza(first, second, third, fourth, fifth, size) {
 
 window.addEventListener("load", function () {
 
-
-  document.querySelector("form#pick").addEventListener("submit", function (event) {
+  document.querySelector("form#pick").addEventListener("submit", function handlePick(event) {
     event.preventDefault();
 
-    const pick1 = document.getElementById("firstTopping");
-    const pick11 = pick1.options[pick1.selectedIndex].value;
-    const pick2 = document.getElementById("secondTopping");
-    const pick22 = pick2.options[pick2.selectedIndex].value;
-    const pick3 = document.getElementById("thirdTopping");
-    const pick33 = pick3.options[pick3.selectedIndex].value;
-    const pick4 = document.getElementById("fourthTopping");
-    const pick44 = pick4.options[pick4.selectedIndex].value;
-    const pick5 = document.getElementById("fifthTopping");
-    const pick55 = pick5.options[pick5.selectedIndex].value;
+    let pick1 = document.getElementById("firstTopping");
+    let pick11 = pick1.options[pick1.selectedIndex].value;
+    let pick2 = document.getElementById("secondTopping");
+    let pick22 = pick2.options[pick2.selectedIndex].value;
+    let pick3 = document.getElementById("thirdTopping");
+    let pick33 = pick3.options[pick3.selectedIndex].value;
+    let pick4 = document.getElementById("fourthTopping");
+    let pick44 = pick4.options[pick4.selectedIndex].value;
+    let pick5 = document.getElementById("fifthTopping");
+    let pick55 = pick5.options[pick5.selectedIndex].value;
 
-    const sizePick = document.getElementById("pickSize");
-    const size = sizePick.options[sizePick.selectedIndex].value;
+    let sizePick = document.getElementById("pickSize");
+    let size = sizePick.options[sizePick.selectedIndex].value;
 
-    let NewPizza = new Pizza(pick11, pick22, pick33, pick44, pick55, size);
+    //const priceShow = document.getElementById("price-pizza").text(this.price);
 
 
+    let PizzaOrder = new Pizza(pick11, pick22, pick33, pick44, pick55, size);
+
+
+
+    PizzaOrder.CalSizePrice();
+    console.log(PizzaOrder);
+    PizzaOrder.CalToppingsOne();
+    PizzaOrder.CalToppingsTwo();
+    PizzaOrder.CalToppingsThree();
+    PizzaOrder.CalToppingsFour();
+    PizzaOrder.CalToppingsFive();
+
+
+
+
+    document.getElementById("price-pizza").innerHTML = PizzaOrder.price;
+    document.getElementById("topping-pizza").innerText = PizzaOrder.pick11 + "," + PizzaOrder.pick22 + "," + PizzaOrder.pick33 + "," + PizzaOrder.pick44 + "," + PizzaOrder.pick55;
+    document.getElementById("size-pizza").innerText = PizzaOrder.size;
   })
+
 });
 
 
