@@ -37,21 +37,21 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #### Tests:
-**Test1
+Test1
 Describe: Pizza();
 
 Test: pick toppings(or none of them) and size.
 Code: let PizzaOrder = new Pizza("pepperoni", "sausage", "green bell pepper", "black olives", "mushrooms", "small" )
 Expect: {toppings: "pepperoni", "sausage", "green bell pepper", "black olives", "mushrooms", size: "small", price: 19}
 
-**Test2
+Test2
 Describe: CalToppingsOne();
 
 Test: pick first topping.
 Code:  let PizzaOrder = new Pizza ("pepperoni")
 Expect: {toppings: "pepperoni", 7}
 
-**Test3
+Test3
 Describe: CalSizePrice();
 
 Test: pick size of your pizza(without toppings).
