@@ -89,9 +89,7 @@ window.addEventListener("load", function () {
     PizzaOrder.CalToppingsFive();
 
     document.getElementById("topping-pizza").innerText = PizzaOrder.first + "," + PizzaOrder.second + "," + PizzaOrder.third + "," + PizzaOrder.fourth + "," + PizzaOrder.fifth;
-
     document.getElementById("size-pizza").innerText = PizzaOrder.size;
-
     document.getElementById("price-pizza").innerText = PizzaOrder.price;
   })
 
