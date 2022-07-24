@@ -57,3 +57,10 @@ Describe: CalToppingsTwo();
 * Test: pick two toppings(small size by default).
 * Code:  let PizzaOrder = new Pizza ("pepperoni","green bell pepper").
 * Expect: {toppings:"pepperoni","green bell pepper", 10}.
+
+Test4
+Describe:CalToppingsThree();
+
+* Test: pick three toppings(small size by default).
+* Code:  let PizzaOrder = new Pizza ("pepperoni","green bell pepper","sausage").
+* Expect: {toppings: "pepperoni","green bell pepper","sausage", 13}.
