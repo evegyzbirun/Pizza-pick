@@ -37,18 +37,21 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #### Tests:
+*Test1
+Describe: Pizza();
 
-Describe: Count();
+Test: pick toppings(or none of them) and size.
+Code: let PizzaOrder = new Pizza("pepperoni", "sausage", "green bell pepper", "black olives", "mushrooms", "small" )
+Expect: {toppings: "pepperoni", "sausage", "green bell pepper", "black olives", "mushrooms", size: "small", price: 19}
+*Test2
+Describe: CalToppingsOne();
 
-Test: pick toppings(you can pick some or none of them)
-Code: const myPick = new Pick(["pepperoni", "sausage", "green bell pepper", "black olives", "mushrooms"], 15 )
+Test: pick first topping.
+Code:  let PizzaOrder = new Pizza ("pepperoni")
+Expect: {toppings: "pepperoni", 7}
+*Test3
+Describe: CalSizePrice();
 
-Expect: Pick {toppings: ["pepperoni", "sausage", "green bell pepper", "black olives", "mushrooms"], total: 15}
-
-
-Describe: Size();
-
-Test: pick size of your pizza(without toppings)
-Code: const mySize = new Pick(["xlarge"])
-
-Expect: order1.Size("xlarge"); to equal [10]
+Test: pick size of your pizza(without toppings).
+Code: let PizzaOrder = new Pizza("xlarge")
+Expect: {size: "xlarge", price: 10}

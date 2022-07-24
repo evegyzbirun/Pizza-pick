@@ -60,42 +60,26 @@ function Pizza(first, second, third, fourth, fifth, size) {
       this.price += 3;
     }
   };
-
 };
 
-
 //User Interface Logic 
-
-
-
-
-
 window.addEventListener("load", function () {
-
   document.querySelector("form#pick").addEventListener("submit", function (event) {
     event.preventDefault();
-
     const pick1 = document.getElementById("firstTopping");
-    const pick11 = pick1.options[pick1.selectedIndex].value;
+    const first = pick1.options[pick1.selectedIndex].value;
     const pick2 = document.getElementById("secondTopping");
-    const pick22 = pick2.options[pick2.selectedIndex].value;
+    const second = pick2.options[pick2.selectedIndex].value;
     const pick3 = document.getElementById("thirdTopping");
-    const pick33 = pick3.options[pick3.selectedIndex].value;
+    const third = pick3.options[pick3.selectedIndex].value;
     const pick4 = document.getElementById("fourthTopping");
-    const pick44 = pick4.options[pick4.selectedIndex].value;
+    const fourth = pick4.options[pick4.selectedIndex].value;
     const pick5 = document.getElementById("fifthTopping");
-    const pick55 = pick5.options[pick5.selectedIndex].value;
-
+    const fifth = pick5.options[pick5.selectedIndex].value;
     const sizePick = document.getElementById("pickSize");
     const size = sizePick.options[sizePick.selectedIndex].value;
-    //console.log(size);
 
-    //const priceShow = document.getElementById("price-pizza").text(this.price);
-
-
-    let PizzaOrder = new Pizza(pick11, pick22, pick33, pick44, pick55, size);
-
-
+    let PizzaOrder = new Pizza(first, second, third, fourth, fifth, size);
 
     PizzaOrder.CalSizePrice();
     PizzaOrder.CalToppingsOne();
@@ -104,12 +88,11 @@ window.addEventListener("load", function () {
     PizzaOrder.CalToppingsFour();
     PizzaOrder.CalToppingsFive();
 
+    document.getElementById("topping-pizza").innerText = PizzaOrder.first + "," + PizzaOrder.second + "," + PizzaOrder.third + "," + PizzaOrder.fourth + "," + PizzaOrder.fifth;
 
-
+    document.getElementById("size-pizza").innerText = PizzaOrder.size;
 
     document.getElementById("price-pizza").innerText = PizzaOrder.price;
-    document.getElementById("topping-pizza").innerText = PizzaOrder.pick11 + "," + PizzaOrder.pick22 + "," + PizzaOrder.pick33 + "," + PizzaOrder.pick44 + "," + PizzaOrder.pick55;
-    document.getElementById("size-pizza").innerText = PizzaOrder.size;
   })
 
 });
