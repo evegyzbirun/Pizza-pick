@@ -41,17 +41,45 @@ Test1
 Describe: Pizza();
 
 * Test: pick toppings(or none of them) and size.
-* Code: let PizzaOrder = new Pizza("pepperoni", "sausage", "green bell pepper", "black olives", "mushrooms", "small" ).
-* Expect: {toppings: "pepperoni", "sausage", "green bell pepper", "black olives", "mushrooms", size: "small", price: 19}.
+* Code: let PizzaOrder = new Pizza("pepperoni", "sausage", "green bell pepper", "black olives", "none", "medium" ).
+* Expect: {toppings: "pepperoni", "sausage", "green bell pepper", "black olives", "none", size: "small", price: 18}.
 
 Test2
 Describe: CalToppingsOne();
 
-* Test: pick first topping.
+* Test: pick one topping(small size by default).
 * Code:  let PizzaOrder = new Pizza ("pepperoni").
 * Expect: {toppings: "pepperoni", 7}.
 
 Test3
+Describe: CalToppingsTwo();
+
+* Test: pick two toppings(small size by default).
+* Code:  let PizzaOrder = new Pizza ("pepperoni","green bell pepper").
+* Expect: {toppings:"pepperoni","green bell pepper", 10}.
+
+Test4
+Describe:CalToppingsThree();
+
+* Test: pick three toppings(small size by default).
+* Code:  let PizzaOrder = new Pizza ("pepperoni","green bell pepper","sausage").
+* Expect: {toppings: "pepperoni","green bell pepper","sausage", 13}.
+
+Test5
+Describe:CalToppingsFour();
+
+* Test: pick four toppings(small size by default).
+* Code:  let PizzaOrder = new Pizza ("pepperoni","green bell pepper","sausage", "black olives").
+* Expect: {toppings: "pepperoni","green bell pepper","sausage", "black olives", 16}.
+
+Test5
+Describe:CalToppingsFive();
+
+* Test: pick five toppings(small size by default).
+* Code:  let PizzaOrder = new Pizza ("pepperoni","green bell pepper","sausage", "black olives", "pepperoni").
+* Expect: {toppings: "pepperoni","green bell pepper","sausage", "black olives", "pepperoni", 19}.
+
+Test
 Describe: CalSizePrice();
 
 * Test: pick size of your pizza(without toppings).
