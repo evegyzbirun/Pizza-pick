@@ -92,7 +92,6 @@ window.addEventListener("load", function () {
     document.getElementById("size-pizza").innerText = PizzaOrder.size;
     document.getElementById("price-pizza").innerText = PizzaOrder.price;
   })
-
 });
 
 
