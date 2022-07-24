@@ -79,7 +79,7 @@ Describe:CalToppingsFive();
 * Code:  let PizzaOrder = new Pizza ("pepperoni","green bell pepper","sausage", "black olives", "pepperoni").
 * Expect: {toppings: "pepperoni","green bell pepper","sausage", "black olives", "pepperoni", 19}.
 
-Test
+Test6
 Describe: CalSizePrice();
 
 * Test: pick size of your pizza(without toppings).
