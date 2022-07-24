@@ -40,20 +40,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 Test1
 Describe: Pizza();
 
-Test: pick toppings(or none of them) and size.
-Code: let PizzaOrder = new Pizza("pepperoni", "sausage", "green bell pepper", "black olives", "mushrooms", "small" ).
-Expect: {toppings: "pepperoni", "sausage", "green bell pepper", "black olives", "mushrooms", size: "small", price: 19}.
+* Test: pick toppings(or none of them) and size.
+* Code: let PizzaOrder = new Pizza("pepperoni", "sausage", "green bell pepper", "black olives", "mushrooms", "small" ).
+* Expect: {toppings: "pepperoni", "sausage", "green bell pepper", "black olives", "mushrooms", size: "small", price: 19}.
 
 Test2
 Describe: CalToppingsOne();
 
-Test: pick first topping.
-Code:  let PizzaOrder = new Pizza ("pepperoni").
-Expect: {toppings: "pepperoni", 7}.
+* Test: pick first topping.
+* Code:  let PizzaOrder = new Pizza ("pepperoni").
+* Expect: {toppings: "pepperoni", 7}.
 
 Test3
 Describe: CalSizePrice();
 
-Test: pick size of your pizza(without toppings).
-Code: let PizzaOrder = new Pizza("xlarge").
-Expect: {size: "xlarge", price: 10}.
+* Test: pick size of your pizza(without toppings).
+* Code: let PizzaOrder = new Pizza("xlarge").
+* Expect: {size: "xlarge", price: 10}.
